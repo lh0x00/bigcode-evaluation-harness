@@ -11,7 +11,7 @@ for lang in "${langs[@]}"; do
 
     echo "Running task $task"
     generations_path=generations_$model/generations_$task\_$model.json
-    accelerate launch main.py \
+    python main.py \
             --model $org/$model \
             --task $task \
             --n_samples 50 \
