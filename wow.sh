@@ -20,7 +20,6 @@ for lang in "${langs[@]}"; do
             --temperature 0.2 \
             --precision bf16 \
             --trust_remote_code \
-            --use_auth_token \
             --generation_only \
             --save_generations_path $generations_path
     echo "Task $task done"
