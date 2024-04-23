@@ -8,7 +8,7 @@ for lang in "${!langs[@]}"; do
     generations_path=generations_$model/generations_$task\_$model.json
     accelerate launch main.py \
             --model "$org/$model" \
-            --task "multiple-l$ang" \
+            --task "multiple-$lang" \
             --n_samples 5 \
             --batch_size 5 \
             --limit 8 \
