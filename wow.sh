@@ -7,8 +7,8 @@ for lang in "${!langs[@]}"; do
     echo "For language $lang, the prefix is: $prefix"
     generations_path=generations_$model/generations_$task\_$model.json
     accelerate launch main.py \
-            --model $org/$model \
-            --task multiple-l$ang \
+            --model "$org/$model" \
+            --task "multiple-l$ang" \
             --n_samples 5 \
             --batch_size 5 \
             --limit 8 \
